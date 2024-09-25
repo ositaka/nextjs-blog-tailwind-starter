@@ -1,6 +1,6 @@
 # 🚀 Next.js 14 Blog Starter with Tailwind CSS, Contentlayer, & Decap CMS
 
-Welcome to the **design-code.tips starter**! This open-source starter template is built with **Next.js 14**, **Tailwind CSS**, **Contentlayer**, and **Decap CMS**. It's designed to be a simple and customizable way to launch a modern blog, with support for MDX and multiple categories like Code Blog, Inspiration, Podcasts, Tools, and Resources.
+Welcome to the [**design-code.tips starter**](https://design-code.tips/)! This open-source starter template is built with **Next.js 14**, **Tailwind CSS**, **Contentlayer**, and **Decap CMS**. It's designed to be a simple and customizable way to launch a modern blog, with support for MDX and multiple categories like Code Blog, Inspiration, Podcasts, Tools, and Resources.
 
 ## 💻 Starter Preview
 
@@ -174,8 +174,8 @@ Thank you for considering contributing to the project!
 ## 🔗 Links
 
 - [Demo](https://design-code.tips)
-- [Documentation](https://github.com/ositaka/design-code.tips/blob/main/README.md)
-- [GitHub Repo](https://github.com/ositaka/design-code.tips)
+- [Documentation](https://github.com/ositaka/nextjs-blog-tailwind-starter/blob/main/README.md)
+- [GitHub Repo](https://github.com/ositaka/nextjs-blog-tailwind-starter)
 
 ---
 
