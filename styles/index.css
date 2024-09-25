@@ -1,0 +1,193 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+html {
+  overflow-x: hidden;
+  margin-right: calc(-1 * (100vw - 100%));
+  font-size: 20px;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #fafafa;
+}
+
+#__next {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main {
+  margin: auto;
+}
+
+.blog-post {
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+.blog-post * {
+  margin-block: 1.75rem;
+}
+
+.blog-post h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-block: 3rem 1rem;
+  text-wrap: balance;
+}
+
+.blog-post h2 + h3 {
+  margin-block-start: 0rem;
+  text-wrap: balance;
+}
+
+.blog-post h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-block: 2rem 1rem;
+  text-wrap: balance;
+}
+
+.blog-post h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-block: 2rem 1rem;
+  text-wrap: balance;
+}
+
+.blog-post a {
+  font-weight: 550;
+  border-bottom: currentColor 0.5px solid;
+}
+.blog-post a:hover,
+.blog-post a:focus {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.blog-post hr {
+  border: none;
+  border-bottom: 1.5px solid currentColor;
+  opacity: 0.2;
+}
+
+.blog-post img {
+  width: 100%;
+}
+
+.blog-post pre {
+  font-size: 0.8rem;
+  margin-bottom: 2rem !important;
+}
+
+.blog-post pre:last-child {
+  margin-bottom: 0 !important;
+}
+
+.blog-post p:not(:has(video, img)),
+.blog-post ul {
+  max-width: 860px;
+  text-wrap: balance;
+}
+
+.blog-post p {
+  letter-spacing: 0.05ch;
+}
+
+@media screen and (min-width: 600px) {
+  .blog-post p {
+    text-wrap: pretty;
+  }
+}
+
+.blog-post p code,
+.blog-post ul code,
+.blog-post ol code,
+.blog-post blockquote code {
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding-inline: 0.2rem;
+}
+
+.blog-post blockquote,
+.blog-post img,
+.blog-post video {
+  border-radius: 0.75rem;
+  margin-inline: auto;
+}
+
+.blog-post ul,
+.blog-post ol {
+  padding-inline-start: 1rem;
+}
+.blog-post ul {
+  list-style-type: disc;
+}
+
+.blog-post ul ul {
+  list-style-type: circle;
+}
+
+.blog-post ol {
+  list-style-type: decimal;
+}
+
+.blog-post ul ul,
+.blog-post ol ol {
+  padding-inline-start: 2rem;
+  margin-block: 0 1rem;
+}
+
+.blog-post li {
+  display: list-item;
+  margin-block: 0.5rem;
+  text-wrap: balance;
+}
+
+.blog-post blockquote {
+  border-left: 0.25rem solid color-mix(in srgb, currentColor 20%, transparent);
+  background-color: color-mix(in srgb, currentColor 5%, transparent);
+  padding: 0.25rem 1.5rem;
+  margin-block: 1rem;
+  font-style: italic;
+}
+
+.blog-post ul li > a {
+  padding: 0.6ch 0;
+}
+
+/* Manually set the background color of the code blocks to match the theme: */
+.blog-post :not(pre) > code[class*='language-'],
+.blog-post pre[class*='language-'] {
+  background: #1e293c;
+}
+
+@media (prefers-color-scheme: dark) {
+  .blog-post :not(pre) > code[class*='language-'],
+  .blog-post pre[class*='language-'] {
+    background: #1e293ccc;
+  }
+}
+
+::-webkit-scrollbar {
+  height: 0.25rem;
+  width: 0.25rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}

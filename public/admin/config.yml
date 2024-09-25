@@ -1,0 +1,239 @@
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+
+# publish_mode: editorial_workflow
+
+editor:
+  preview: false
+
+display_url: https://design-code.tips # This url will display in the top-right of the CMS
+media_folder: 'public/media' # Media files will be stored in the repo under static/media
+public_folder: '/media' # The src attribute for uploaded media will begin with /media
+collections:
+  - name: 'page'
+    label: 'Pages'
+    files:
+      - file: 'content/page/home.md'
+        label: 'Home'
+        name: 'home'
+        fields:
+          - label: 'Title'
+            name: 'title'
+            widget: string
+
+      - file: 'content/page/about.md'
+        label: 'About'
+        name: 'about'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - {
+              label: 'Description',
+              name: 'description',
+              widget: 'markdown',
+              sanitize_preview: true,
+              buttons: ['bold', 'italic', 'link'],
+              modes: ['rich_text'],
+              editor_components: [''],
+            }
+
+      - file: 'content/page/contact.md'
+        label: 'Contact'
+        name: 'contact'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Description', name: 'description', widget: 'text' }
+
+  - name: 'blog' # Used in routes, e.g., /admin/collections/blog
+    label: 'Code Blog' # Used in the UI
+    folder: 'content/blog' # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: '{{year}}-{{month}}-{{day}}-{{title}}' # Filename template, e.g., 2024-090-25-name-of-doc.md
+    view_groups:
+      - label: Year
+        field: date
+        pattern: \d{4}
+    fields: # The fields for each document, usually in front matter
+      - {
+          label: 'Template Key', # This field is used to "group" the posts by category
+          name: 'templateKey',
+          widget: 'hidden', # It should be an `hidden` field
+          default: 'blog',
+        }
+      - { label: 'Title', name: 'title', widget: string }
+      - { label: 'Featured', name: 'featured', widget: boolean, default: false }
+      - {
+          label: 'Body',
+          name: 'body',
+          widget: 'markdown',
+          sanitize_preview: true,
+          # buttons: ['bold', 'italic', 'link'],
+          # modes: ['rich_text'],
+          # editor_components: [''],
+        }
+      - { label: 'Tags', name: 'tags', widget: 'list' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+
+  - name: 'inspiration'
+    label: 'Inspiration'
+    folder: 'content/inspiration'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{title}}'
+    extension: mdx
+    format: frontmatter
+    view_groups:
+      - label: Year
+        field: date
+        pattern: \d{4}
+    fields:
+      - {
+          label: 'Template Key',
+          name: 'templateKey',
+          widget: 'hidden',
+          default: 'inspiration',
+        }
+      - { label: 'Title', name: 'title', widget: string }
+      - { label: 'Featured', name: 'featured', widget: boolean, default: false }
+      - {
+          label: 'Featured Image',
+          name: 'image',
+          widget: 'image',
+          choose_url: false,
+        }
+      - {
+          label: 'Body',
+          name: 'body',
+          widget: 'markdown',
+          sanitize_preview: true,
+          minimal: true,
+        }
+      - { label: 'Tags', name: 'tags', widget: 'list' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+
+  - name: 'podcasts'
+    label: 'Podcasts'
+    label_singular: 'Podcast'
+    folder: 'content/podcasts'
+    create: true
+    slug: '{{title}}'
+    view_groups:
+      - label: Year
+        field: date
+        pattern: \d{4}
+    fields:
+      - {
+          label: 'Template Key',
+          name: 'templateKey',
+          widget: 'hidden',
+          default: 'podcasts',
+        }
+      - { label: 'Title', name: 'title', widget: string }
+      - { label: 'Featured', name: 'featured', widget: boolean, default: false }
+      - { label: 'Link', name: 'link', widget: string }
+      - {
+          label: 'Featured Image',
+          name: 'image',
+          widget: 'image',
+          choose_url: false,
+        }
+      - {
+          label: 'Body',
+          name: 'body',
+          widget: 'markdown',
+          sanitize_preview: true,
+          minimal: true,
+        }
+      - { label: 'Tags', name: 'tags', widget: 'list' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+
+  - name: 'tools'
+    label: 'Tools'
+    label_singular: 'Tool'
+    folder: 'content/tools'
+    create: true
+    slug: '{{title}}'
+    view_groups:
+      - label: Year
+        field: date
+        pattern: \d{4}
+    fields:
+      - {
+          label: 'Template Key',
+          name: 'templateKey',
+          widget: 'hidden',
+          default: 'tools',
+        }
+      - { label: 'Title', name: 'title', widget: string }
+      - { label: 'Featured', name: 'featured', widget: boolean, default: false }
+      - {
+          label: 'App Icon Image',
+          name: 'image',
+          widget: 'image',
+          choose_url: false,
+        }
+      - { label: 'Link', name: 'link', widget: string }
+      - {
+          label: 'Body',
+          name: 'body',
+          widget: 'markdown',
+          sanitize_preview: true,
+          minimal: true,
+        }
+      - { label: 'Tags', name: 'tags', widget: 'list' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+
+  - name: 'resources'
+    label: 'Resources'
+    label_singular: 'Resource'
+    folder: 'content/resources'
+    create: true
+    slug: '{{title}}'
+    view_groups:
+      - label: Year
+        field: date
+        pattern: \d{4}
+    fields:
+      - {
+          label: 'Template Key',
+          name: 'templateKey',
+          widget: 'hidden',
+          default: 'resources',
+        }
+      - { label: 'Title', name: 'title', widget: string }
+      - { label: 'Featured', name: 'featured', widget: boolean, default: false }
+      - { label: 'Image', name: 'image', widget: 'image', choose_url: false }
+      - { label: 'Link', name: 'link', widget: string }
+      - {
+          label: 'Body',
+          name: 'body',
+          widget: 'markdown',
+          sanitize_preview: true,
+          minimal: true,
+        }
+      - { label: 'Tags', name: 'tags', widget: 'list' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+
+  # - name: 'authors'
+  #   label: 'Authors'
+  #   folder: 'content/authors'
+  #   create: true
+  #   slug: '{{name}}'
+  #   fields:
+  #     - { label: 'Name', name: 'name', widget: 'string', required: true }
+  #     - {
+  #         label: 'About',
+  #         name: 'description',
+  #         widget: 'markdown',
+  #         sanitize_preview: true,
+  #         buttons: ['bold', 'italic', 'link', 'heading-two', 'heading-three'],
+  #         modes: ['rich_text'],
+  #         editor_components: [''],
+  #       }
+  #     - {
+  #         label: 'Featured Image',
+  #         name: 'image',
+  #         widget: 'image',
+  #         choose_url: false,
+  #       }
