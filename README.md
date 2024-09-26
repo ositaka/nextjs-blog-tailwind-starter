@@ -147,6 +147,14 @@ Customize the project to suit your needs by editing the following files:
 - `contentlayer.config.js`: Contentlayer configuration for MDX files.
 - `decap-cms/config.yml`: Decap CMS configuration.
 
+## 🚀 Deploy
+
+To deploy your blog, you can use services like [**Netlify**](https://www.netlify.com/). 
+
+> [!NOTE]
+> If you encounter errors related to **`sharp`** during deployment, please try removing the `package-lock.json` file, as this can sometimes resolve issues with Sharp's dependencies.
+
+
 ## 📄 License
 
 This project is licensed under the MIT License. See the [LICENSE](/LICENSE) file for details.
