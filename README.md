@@ -177,12 +177,12 @@ import ExportedImage from 'next-image-export-optimizer'
 
 ### TypeScript and Contentlayer Integration
 
-This project uses [**Contentlayer**](https://contentlayer.dev/) to automatically generate TypeScript types for your content. The configuration is managed in the `contentlayer.config.ts` file located at the root of the project. Each document type (e.g., Blog posts, Pages) has its own structure and generated types, ensuring type safety when working with content in your components.
+This project uses [**Contentlayer**](https://contentlayer.dev/) to [automatically generate TypeScript types for your content](https://contentlayer.dev/docs/concepts/type-safety). The configuration is managed in the `contentlayer.config.ts` file located at the root of the project. Each document type (e.g., Blog, Inspiration, Podcasts, Tools, Pages) has its own structure and generated types, ensuring type safety when working with content in your components.
 
 Below is an example of the TypeScript types generated for the **Blog** document:
 
 ```ts
-import { defineDocumentType, makeSource } from 'contentlayer/source-files'
+import { defineDocumentType, makeSource } from 'contentlayer2/source-files'
 
 const Blog = defineDocumentType(() => ({
   name: 'Blog',
@@ -193,7 +193,7 @@ const Blog = defineDocumentType(() => ({
     date: { type: 'date', required: false },
     description: { type: 'string', required: false },
     tags: { type: 'json', required: false },
-    templateKey: { type: 'string', required: false },
+    templateKey: { type: 'string', required: true },
     featured: { type: 'boolean', required: false },
   },
   computedFields: {
@@ -204,9 +204,10 @@ const Blog = defineDocumentType(() => ({
   },
 }))
 
-export const contentLayerConfig = makeSource({
+export default makeSource({
   contentDirPath: 'content',
-  documentTypes: [Blog],
+  documentTypes: [Page, Blog, Inspiration, Podcasts, Tools, Resources],
+  disableImportAliasWarning: true,
 })
 ```
 
@@ -290,6 +291,17 @@ backend:
   name: git-gateway
   branch: main
 ```
+
+To enable Netlify Identity in this starter project, the following component is used in the `layout.tsx` file:
+
+```tsx
+<NetlifyIdentityRedirect />
+```
+
+This component automatically redirects users to the login page if they are not authenticated.
+
+> [!TIP]  
+> For more information on setting up Netlify Identity with Decap CMS, visit the [Decap CMS documentation – Choosing a Backend](https://decapcms.org/docs/choosing-a-backend).
 
 ## 📄 License
 

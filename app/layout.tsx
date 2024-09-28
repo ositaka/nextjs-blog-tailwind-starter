@@ -6,6 +6,7 @@ import '../styles/prism-a11y-dark.css'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { AnimatePresence } from 'framer-motion'
+import NetlifyIdentityRedirect from '../components/NetlifyIdentityRedirect'
 
 export default function RootLayout({
   children,
@@ -31,6 +32,7 @@ export default function RootLayout({
           {children}
         </AnimatePresence>
         <Footer />
+        <NetlifyIdentityRedirect />
       </body>
     </html>
   )
