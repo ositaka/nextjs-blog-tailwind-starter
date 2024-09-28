@@ -142,11 +142,12 @@ You can then access the CMS at http://localhost:3000/admin/index.html.
 
 Customize the project to suit your needs by editing the following files:
 
-- `config.js`: Your Bleg Starter configuration.
-- `tailwind.config.js`: Tailwind CSS configuration.
-- `next.config.js`: Next.js custom settings.
-- `contentlayer.config.js`: Contentlayer configuration for MDX files.
-- `decap-cms/config.yml`: Decap CMS configuration.
+- [`config.js`](https://github.com/ositaka/nextjs-blog-tailwind-starter/blob/main/config.js): Your Bleg Starter configuration.
+- [`tailwind.config.js`](https://github.com/ositaka/nextjs-blog-tailwind-starter/blob/main/tailwind.config.js): Tailwind CSS configuration.
+- [`next.config.js`](https://github.com/ositaka/nextjs-blog-tailwind-starter/blob/main/next.config.js): Next.js custom settings.
+- [`next-seo.config.js`](https://github.com/ositaka/nextjs-blog-tailwind-starter/blob/main/next-seo.config.js): SEO configuration for Next.js.
+- [`contentlayer.config.js`](https://github.com/ositaka/nextjs-blog-tailwind-starter/blob/main/contentlayer.config.ts): Contentlayer configuration for MDX files.
+- [`public/admin/config.yml`](https://github.com/ositaka/nextjs-blog-tailwind-starter/blob/main/public/admin/config.yml): Decap CMS configuration.
 
 ### `next.config.js`:
 
