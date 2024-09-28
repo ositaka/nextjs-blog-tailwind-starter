@@ -18,7 +18,7 @@ export function generateMetadata(): Metadata {
     title: `Explore all #Tags available at ${SITE_NAME}`,
     description:
       'Explore a comprehensive list of tags and categories, from design and development to tools and podcasts. Click on any tag to discover new insights.',
-    image: `${SITE_URL}/og-card.jpg`,
+    image: `${SITE_URL}/og-card.png`,
   }
 
   return {
@@ -31,8 +31,8 @@ export function generateMetadata(): Metadata {
       images: [
         {
           url: SEO.image,
-          width: 1200,
-          height: 900,
+          width: 1600,
+          width: 800,
           alt: `${SITE_NAME}`,
           type: 'image/jpeg',
         },

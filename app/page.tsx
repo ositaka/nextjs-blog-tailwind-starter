@@ -30,7 +30,7 @@ export function generateMetadata(): Metadata {
   const SEO = {
     title: home?.title || 'Home',
     description: home?.description || `Welcome to the Homepage of ${SITE_NAME}`,
-    image: `${SITE_URL}/og-card.jpg`,
+    image: `${SITE_URL}/og-card.png`,
   }
 
   return {
@@ -44,8 +44,8 @@ export function generateMetadata(): Metadata {
       images: [
         {
           url: SEO.image,
-          width: 1200,
-          height: 900,
+          width: 1600,
+          width: 800,
           alt: `${SITE_NAME}`,
           type: 'image/jpeg',
         },

@@ -34,8 +34,8 @@ export async function generateMetadata({
       images: [
         {
           url: `${SITE_URL}${inspiration.image}`,
-          width: 1200,
-          height: 900,
+          width: 1600,
+          width: 800,
           alt: `${SITE_NAME}`,
           type: 'image/jpeg',
         },

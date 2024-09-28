@@ -13,7 +13,7 @@ export function generateMetadata(): Metadata {
     title: 'Code Blog by Nuno Marques | Design & Development Tips',
     description:
       'Discover the latest blogs on code, web design and development. Stay up to date with the latest trends and technologies, with code examples.',
-    image: `${SITE_URL}/og-card.jpg`,
+    image: `${SITE_URL}/og-card.png`,
   }
 
   return {
@@ -26,8 +26,8 @@ export function generateMetadata(): Metadata {
       images: [
         {
           url: SEO.image,
-          width: 1200,
-          height: 900,
+          width: 1600,
+          width: 800,
           alt: `${SITE_NAME}`,
           type: 'image/jpeg',
         },

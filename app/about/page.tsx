@@ -19,9 +19,9 @@ export function generateMetadata(): Metadata {
       authors: `${AUTHOR_NAME}`,
       images: [
         {
-          url: `${SITE_URL}/og-card.jpg`,
-          width: 1200,
-          height: 900,
+          url: `${SITE_URL}/og-card.png`,
+          width: 1600,
+          width: 800,
           alt: 'banner',
           type: 'image/jpeg',
         },
