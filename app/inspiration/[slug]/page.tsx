@@ -14,7 +14,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const inspiration = allInspirations.find(
     (inspiration) => inspiration.slug === params.slug
-  )
+  ) as Inspiration
 
   if (!inspiration) {
     return notFound()

@@ -12,7 +12,7 @@ export async function generateMetadata({
 }: {
   params: { slug: string }
 }): Promise<Metadata> {
-  const tool = allTools.find((tool) => tool.slug === params.slug)
+  const tool = allTools.find((tool) => tool.slug === params.slug) as Tools
 
   if (!tool) {
     return notFound()

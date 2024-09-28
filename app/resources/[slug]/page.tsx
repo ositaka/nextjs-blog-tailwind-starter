@@ -14,7 +14,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const resource = allResources.find(
     (resource) => resource.slug === params.slug
-  )
+  ) as Resources
 
   if (!resource) {
     return notFound()

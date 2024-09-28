@@ -14,7 +14,7 @@ export async function generateMetadata({
 }: {
   params: { slug: string }
 }): Promise<Metadata> {
-  const podcast = allPodcasts.find((podcast) => podcast.slug === params.slug)
+  const podcast = allPodcasts.find((podcast) => podcast.slug === params.slug) as Podcasts
 
   if (!podcast) {
     return notFound()

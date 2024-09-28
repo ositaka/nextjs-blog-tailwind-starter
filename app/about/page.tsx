@@ -6,7 +6,7 @@ import gfm from 'remark-gfm'
 import { AUTHOR_NAME, SITE_NAME, SITE_URL } from '../../config'
 
 // Get page data
-const about = allPages.find((about: Page) => about?.slug === 'about')
+const about = allPages.find((about: Page) => about?.slug === 'about') as Page
 
 export function generateMetadata(): Metadata {
   return {

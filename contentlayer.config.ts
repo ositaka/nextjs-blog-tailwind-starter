@@ -52,7 +52,7 @@ const Blog = defineDocumentType(() => ({
     },
     templateKey: {
       type: 'string',
-      required: false,
+      required: true,
     },
     featured: {
       type: 'boolean',
@@ -94,7 +94,7 @@ const Inspiration = defineDocumentType(() => ({
     },
     templateKey: {
       type: 'string',
-      required: false,
+      required: true,
     },
     featured: {
       type: 'boolean',
@@ -140,7 +140,7 @@ const Podcasts = defineDocumentType(() => ({
     },
     templateKey: {
       type: 'string',
-      required: false,
+      required: true,
     },
     featured: {
       type: 'boolean',
@@ -186,7 +186,7 @@ const Tools = defineDocumentType(() => ({
     },
     templateKey: {
       type: 'string',
-      required: false,
+      required: true,
     },
     featured: {
       type: 'boolean',
@@ -232,7 +232,7 @@ const Resources = defineDocumentType(() => ({
     },
     templateKey: {
       type: 'string',
-      required: false,
+      required: true,
     },
     featured: {
       type: 'boolean',
