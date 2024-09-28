@@ -14,7 +14,9 @@ Welcome to the [**design-code.tips starter**](https://design-code.tips/)! This o
 - 🗂️ **Contentlayer**: Simple content management with files as data.
 - 📋 **Decap CMS**: Easily manage your posts through a friendly CMS interface.
 - 🏷️ **Categories**: Pre-configured sections for Code Blog, Inspiration, Podcasts, and Tools.
+- 🖼️ **Optimized Images**: Optimized image handling in static exports with `<ExportedImage />` from [`next-image-export-optimizer`](https://www.npmjs.com/package/next-image-export-optimizer).
 - 🌗 **Dark/Light Mode**: Automatically adapts to the user's operating system settings.
+
 
 ## 📦 Tech Stack
 
@@ -147,12 +149,69 @@ Customize the project to suit your needs by editing the following files:
 - `contentlayer.config.js`: Contentlayer configuration for MDX files.
 - `decap-cms/config.yml`: Decap CMS configuration.
 
+### `next.config.js`:
+
+- The project uses the **[`next-image-export-optimizer`](https://www.npmjs.com/package/next-image-export-optimizer)** package to enhance image handling in static exports.
+- Custom settings for image optimization:
+  - **Image Folder**: Images are stored in the `public/media` folder.
+  - **Export Settings**: Optimized images are exported to the `out/` folder.
+  - **Quality**: Image quality is set to **75%**.
+  - **WEBP Format**: By default, the images are converted to **WEBP** for improved performance.
+  - **Blurred Placeholder**: Blurry placeholders are enabled for a smoother loading experience. To disable this, set `nextImageExportOptimizer_generateAndUseBlurImages` to `false` in your `.env` or `next.config.js` file, and pass `placeholder="empty"` to all `<ExportedImage>` components.
+
+> [!NOTE]  
+> Replace Next.js `<Image />` components with `<ExportedImage />` to leverage these optimizations. 
+
+Example usage:
+
+```tsx
+import ExportedImage from 'next-image-export-optimizer';
+
+<ExportedImage
+  src="/media/example.jpg"
+  alt="Example Image"
+  width={800}
+  height={600}
+  placeholder="blur"
+/>
+```
+
 ## 🚀 Deploy
 
-To deploy your blog, you can use services like [**Netlify**](https://www.netlify.com/). 
+Deploy your own instance of this blog starter project using one of the following providers:
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=YOUR_REPO_URL)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=YOUR_REPO_URL)
 
 If you encounter errors related to **`sharp`** during deployment, please try removing the `package-lock.json` file, as this can sometimes resolve issues with Sharp's dependencies.
 
+## 🛠️ Setting up Netlify Identity with Decap CMS
+
+If you're deploying your site with Netlify and using Decap CMS for content management, you'll need to enable Netlify Identity to allow users to log in to the CMS at /admin.
+
+1. **Enable Identity**:
+
+  - Go to your site's dashboard on Netlify, navigate to the "Identity" tab, and click Enable Identity.
+
+2. **Configure Git Gateway**:
+
+  - In the Identity settings, enable Git Gateway. This will allow your CMS to interact with the repository via OAuth authentication.
+
+3. **Invite Users**:
+
+  - Invite yourself or other team members to the CMS. Go to the "Identity" tab, click Invite Users, and send invites via email.
+
+4. **Login Access**:
+
+  - Once enabled, users can log in to the /admin panel using their Netlify Identity credentials.
+
+Here's a preview of how this might look in your `config.yml` for Decap CMS:
+
+```yaml
+backend:
+  name: git-gateway
+  branch: main
+```
 
 ## 📄 License
 
