@@ -33,7 +33,7 @@ Follow these steps to get the project up and running:
 
    ```bash
    git clone https://github.com/ositaka/nextjs-blog-tailwind-starter
-   cd your-repo-name
+   cd nextjs-blog-tailwind-starter
    ```
 
 2. **Install dependencies:**
@@ -260,8 +260,8 @@ With these types in place, you can benefit from strong typing and auto-completio
 
 Deploy your own instance of this blog starter project using one of the following providers:
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=YOUR_REPO_URL)
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=YOUR_REPO_URL)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ositaka/nextjs-blog-tailwind-starter/)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/ositaka/nextjs-blog-tailwind-starter/)
 
 > [!NOTE]  
 > If you encounter errors related to **`sharp`** during deployment, please try removing the `package-lock.json` file, as this can sometimes resolve issues with Sharp's dependencies.
