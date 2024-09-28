@@ -262,6 +262,9 @@ Deploy your own instance of this blog starter project using one of the following
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ositaka/nextjs-blog-tailwind-starter/)
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/ositaka/nextjs-blog-tailwind-starter/)
+[![Deploy to GitHub Pages](https://img.shields.io/badge/Deploy%20to%20GitHub%20Pages-blue?style=flat&logo=github)](https://github.com/ositaka/nextjs-blog-tailwind-starter/)
+[![Deploy to Render](https://render.com/assets/deploy-to-render.svg)](https://render.com/deploy?template=https://github.com/ositaka/nextjs-blog-tailwind-starter)
+[![Deploy to Cloudflare Pages](https://img.shields.io/badge/Deploy%20to%20Cloudflare%20Pages-ff6b20?style=flat&logo=cloudflare)](https://cloudflare.com/pages/)
 
 > [!NOTE]  
 > If you encounter errors related to **`sharp`** during deployment, please try removing the `package-lock.json` file, as this can sometimes resolve issues with Sharp's dependencies.
