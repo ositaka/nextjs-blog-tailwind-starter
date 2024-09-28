@@ -157,7 +157,7 @@ Customize the project to suit your needs by editing the following files:
   - **Export Settings**: Optimized images are exported to the `out/` folder.
   - **Quality**: Image quality is set to **75%**.
   - **WEBP Format**: By default, the images are converted to **WEBP** for improved performance.
-  - **Blurred Placeholder**: Blurry placeholders are enabled for a smoother loading experience. To disable this, set `nextImageExportOptimizer_generateAndUseBlurImages` to `false` in your `.env` or `next.config.js` file, and pass `placeholder="empty"` to all `<ExportedImage>` components.
+  - **Blurred Placeholder**: Blurry placeholders are enabled for a smoother loading experience. To disable this, set `nextImageExportOptimizer_generateAndUseBlurImages` to `false` in your `.next.config.js` file, and pass `placeholder="empty"` to all `<ExportedImage>` components.
 
 > [!NOTE]  
 > Replace Next.js `<Image />` components with `<ExportedImage />` to leverage these optimizations.
