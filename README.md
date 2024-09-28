@@ -32,7 +32,7 @@ Follow these steps to get the project up and running:
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/ositaka/design-code.tips
+   git clone https://github.com/ositaka/nextjs-blog-tailwind-starter
    cd your-repo-name
    ```
 
@@ -262,7 +262,8 @@ Deploy your own instance of this blog starter project using one of the following
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=YOUR_REPO_URL)
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=YOUR_REPO_URL)
 
-If you encounter errors related to **`sharp`** during deployment, please try removing the `package-lock.json` file, as this can sometimes resolve issues with Sharp's dependencies.
+> [!NOTE]  
+> If you encounter errors related to **`sharp`** during deployment, please try removing the `package-lock.json` file, as this can sometimes resolve issues with Sharp's dependencies.
 
 ## 🛠️ Setting up Netlify Identity with Decap CMS
 
@@ -270,7 +271,7 @@ If you're deploying your site with Netlify and using Decap CMS for content manag
 
 1. **Enable Identity**:
 
-   - Go to your site's dashboard on Netlify, navigate to the "Identity" tab, and click Enable Identity.
+   - Go to your site's dashboard on [Netlify](https://www.netlify.com/), navigate to the "Identity" tab, and click Enable Identity.
 
 2. **Configure Git Gateway**:
 
@@ -303,6 +304,8 @@ This component automatically redirects users to the login page if they are not a
 > [!TIP]  
 > For more information on setting up Netlify Identity with Decap CMS, visit the [Decap CMS documentation – Choosing a Backend](https://decapcms.org/docs/choosing-a-backend).
 
+---
+
 ## 📄 License
 
 This project is licensed under the MIT License. See the [LICENSE](/LICENSE) file for details.
@@ -329,7 +332,7 @@ Thank you for considering contributing to the project!
 
 ## 🔗 Links
 
-- [Demo](https://design-code.tips)
+- [Demo](https://nextjs-blog-tailwind-starter.netlify.app/)
 - [Documentation](https://github.com/ositaka/nextjs-blog-tailwind-starter/blob/main/README.md)
 - [GitHub Repo](https://github.com/ositaka/nextjs-blog-tailwind-starter)
 
