@@ -275,7 +275,7 @@ Deploy your own instance of this blog starter project using one of the following
 
 ### Setting up Netlify Identity with Decap CMS
 
-If you're deploying your site with Netlify and using Decap CMS for content management, you'll need to enable Netlify Identity to allow users to log in to the CMS at /admin.
+If you're deploying your site with Netlify and using Decap CMS for content management, you'll need to enable [Netlify Identity](https://docs.netlify.com/security/secure-access-to-sites/identity/) to allow users to log in to the CMS at /admin.
 
 1. **Enable Identity**:
 
