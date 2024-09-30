@@ -9,6 +9,7 @@ Welcome to the [**design-code.tips starter**](https://design-code.tips/)! This o
 
 ## 💻 Starter Preview
 
+![Starter Cover Preview](/starter-cover.png)
 ![Homepage in light and dark modes](/starter-preview.png)
 
 ## ✨ Features
