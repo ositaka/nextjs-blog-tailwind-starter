@@ -5,6 +5,8 @@ Welcome to the [**design-code.tips starter**](https://design-code.tips/)! This o
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ositaka/nextjs-blog-tailwind-starter/)
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/ositaka/nextjs-blog-tailwind-starter/)
 
+---
+
 ## 💻 Starter Preview
 
 ![Homepage in light and dark modes](/starter-preview.png)
@@ -269,7 +271,7 @@ Deploy your own instance of this blog starter project using one of the following
 > [!NOTE]  
 > If you encounter errors related to **`sharp`** during deployment, please try removing the `package-lock.json` file, as this can sometimes resolve issues with Sharp's dependencies.
 
-## 🛠️ Setting up Netlify Identity with Decap CMS
+### Setting up Netlify Identity with Decap CMS
 
 If you're deploying your site with Netlify and using Decap CMS for content management, you'll need to enable Netlify Identity to allow users to log in to the CMS at /admin.
 
