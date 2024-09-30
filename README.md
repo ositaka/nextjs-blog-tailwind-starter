@@ -124,7 +124,7 @@ Currently, the 2Advanced Studios are closed for real, since some years already.
 
 ### Run the CMS server
 
-To use Decap CMS, you'll need to run its server alongside your Next.js development server. This can be done by running the following command **in a separate terminal**:
+To use [Decap CMS](https://decapcms.org/), you'll need to run its server alongside your Next.js development server. This can be done by running the following command **in a separate terminal**:
 
 ```bash
 npx decap-server
