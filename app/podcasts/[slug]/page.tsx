@@ -35,7 +35,7 @@ export async function generateMetadata({
         {
           url: `${SITE_URL}${podcast.image}`,
           width: 1600,
-          width: 800,
+          height: 800,
           alt: `${SITE_NAME}`,
           type: 'image/jpeg',
         },
