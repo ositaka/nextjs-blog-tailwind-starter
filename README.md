@@ -2,7 +2,9 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/51784f6e-1f73-4db9-ad5e-c0c514a47181/deploy-status)](https://app.netlify.com/sites/nextjs-blog-tailwind-starter/deploys)
 
-Welcome to the [**design-code.tips**](https://design-code.tips/) Next.js starter! This open-source starter template is built with **Next.js 14**, **Tailwind CSS**, **Contentlayer**, and **Decap CMS**. It's designed to be a simple and customizable way to launch a modern blog, with support for MDX and multiple categories like Code Blog, Inspiration, Podcasts, Tools, and Resources.
+Welcome to the [**design-code.tips**](https://design-code.tips/) Next.js starter! 
+
+This open-source starter template is built with **Next.js 14**, **Tailwind CSS**, **Contentlayer**, and **Decap CMS**. It's designed to be a simple and customizable way to launch a modern blog, with support for MDX and multiple categories like Code Blog, Inspiration, Podcasts, Tools, and Resources.
 
 ![Starter Cover Preview](/starter-cover.png)
 
